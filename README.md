@@ -24,9 +24,11 @@ RegisterNumber: 212223220022
 ```
 import pandas as pd
 data=pd.read_csv("spam.csv",encoding='windows-1252')
+
 ```
 ```
 data.head()
+
 ```
 ### Output:
 ![image](https://github.com/user-attachments/assets/d947ecbc-7bf4-4dcb-ac61-c841c36323d0)
@@ -81,11 +83,14 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
 ```
 x_train.shape
 
+
 ```
 ### Output:
 ![image](https://github.com/user-attachments/assets/10fa1fe6-6dd5-46d1-a6dc-d18bbcd1f5b8)
 ```
 y_train.shape
+
+
 ```
 ### Output:
 ![image](https://github.com/user-attachments/assets/49ecf681-544b-4073-a4e9-dd48acdfd08d)
@@ -94,14 +99,18 @@ y_train.shape
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer()
 
+
 ```
 ```
 x_train=cv.fit_transform(x_train)
 
 x_test=cv.transform(x_test)
+
+
 ```
 ```
 x_train.shape
+
 
 ```
 ### Output:
@@ -121,6 +130,7 @@ svc.fit(x_train,y_train)
 y_pred=svc.predict(x_test)
 y_pred
 
+
 ```
 ### Output:
 ![image](https://github.com/user-attachments/assets/4acb86ea-c30a-45b0-ad73-db7e02fa41f9)
@@ -129,6 +139,7 @@ y_pred
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 accuracy
+
 
 ```
 ### Output:
